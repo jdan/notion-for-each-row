@@ -4,6 +4,8 @@ For each row in a [Notion](https://developers.notion.com/) database, run a JavaS
 
 ### Example
 
+*see [/bin/main.js](/bin/main.js) for implementation*
+
 ```js
 const forEachRow = require("../index");
 
