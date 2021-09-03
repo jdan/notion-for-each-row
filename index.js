@@ -1,15 +1,24 @@
 const { Client } = require("@notionhq/client");
 
-module.exports = async ({ token, database, sorts = [] }, callback) => {
+module.exports = async (
+  { token, database, sorts = [], pageSize = 100 },
+  callback
+) => {
   const notion = new Client({
     auth: token,
   });
 
-  const response = await notion.databases.query({
-    database_id: database,
-    sorts,
-  });
+  let nextCursor = undefined;
+  do {
+    const response = await notion.databases.query({
+      database_id: database,
+      sorts,
+      page_size: pageSize,
+      start_cursor: nextCursor,
+    });
 
-  // todo: paginate
-  response.results.forEach((result) => callback(result));
+    nextCursor = response.next_cursor;
+
+    response.results.forEach((result) => callback(result));
+  } while (nextCursor !== null);
 };
