@@ -1,4 +1,6 @@
 const forEachRow = require("../index");
+
+// dotenv reads `.env`, copy `.env.example` and populate with your details
 require("dotenv").config();
 
 function concatenateTitle(arr) {
