@@ -19,6 +19,6 @@ module.exports = async (
 
     nextCursor = response.next_cursor;
 
-    response.results.forEach((result) => callback(result));
+    response.results.forEach((result) => callback(result, notion));
   } while (nextCursor !== null);
 };
