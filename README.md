@@ -1,10 +1,12 @@
-## for-each-row
+## notion-for-each-row
+
+`npm install --save notion-for-each-row`
 
 For each row in a [Notion](https://developers.notion.com/) database, run a JavaScript function. Paginates so you don't have to.
 
 ### Example
 
-*see [bin/main.js](/bin/main.js) for implementation*
+_see [bin/main.js](/bin/main.js) for implementation_
 
 ```js
 const forEachRow = require("../index");

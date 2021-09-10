@@ -1,7 +1,31 @@
 {
   "name": "notion-for-each-row",
   "dependencies": {
-    "@notionhq/client": "^0.3.1",
+    "@notionhq/client": "^0.3.1"
+  },
+  "description": "For each row in a [Notion](https://developers.notion.com/) database, run a JavaScript function. Paginates so you don't have to.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "bin": {
+    "notion-for-each-row": "main.js"
+  },
+  "devDependencies": {
     "dotenv": "^10.0.0"
-  }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdan/for-each-row.git"
+  },
+  "keywords": [
+    "notion"
+  ],
+  "author": "Jordan Scales <scalesjordan@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jdan/for-each-row/issues"
+  },
+  "homepage": "https://github.com/jdan/for-each-row#readme"
 }
