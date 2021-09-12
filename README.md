@@ -6,10 +6,10 @@ For each row in a [Notion](https://developers.notion.com/) database, run a JavaS
 
 ### Example
 
-_see [bin/main.js](/bin/main.js) for implementation_
+_see [examples/main.js](/examples/main.js) for implementation_
 
 ```js
-const forEachRow = require("../index");
+const forEachRow = require("notion-for-each-row");
 
 forEachRow(
   {
