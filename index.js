@@ -19,6 +19,8 @@ module.exports = async (
 
     nextCursor = response.next_cursor;
 
-    response.results.forEach((result) => callback(result, notion));
+    await Promise.all(
+      response.results.map((result) => callback(result, notion))
+    );
   } while (nextCursor !== null);
 };
